@@ -1,0 +1,16 @@
+version: '2'
+services:
+  drupal:
+    image: drupal:8-apache # this will use the latest version of 1.13.x
+    ports:
+      - '8080:80' # expose 80 on host and sent to 80 in contaier
+
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: sample
+
+
+
+    
+   

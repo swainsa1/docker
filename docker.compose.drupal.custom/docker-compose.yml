@@ -1,0 +1,22 @@
+version: '2'
+services:
+  drupal:
+    build: .
+    image: custom-drupal
+    ports:
+      - '8080:80' # expose 80 on host and sent to 80 in contaier
+
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_PASSWORD: sample
+    volumes:
+      - ./drupal-data:/var/lib/postgresql/data
+
+    
+
+
+
+
+    
+   
